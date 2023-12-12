@@ -56,13 +56,14 @@ packer.startup({
         -- lspkind:提示图标
         use('onsails/lspkind-nvim')
         -- indent-blanklinr:对齐线---
-        use('lukas-reineke/indent-blankline.nvim')
+        use({ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} })
         -- ispsaga
-        -- use "tami5/lspsaga.nvim"
+        --use "tami5/lspsaga.nvim"
+        use({ 'nvimdev/lspsaga.nvim', after = 'nvim-lspconfig' })
 
         --------------代码格式化------------------
-        -- use "mhartington/formatter.nvim"
-        use({ 'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim' })
+        use('mhartington/formatter.nvim')
+        --use({ 'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim' })
     end,
 
     -- 代理站点
